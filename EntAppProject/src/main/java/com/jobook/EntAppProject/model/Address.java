@@ -1,5 +1,7 @@
 package com.jobook.EntAppProject.model;
 
+import org.springframework.stereotype.Component;
+
 public class Address {
 	private String city, state, zip, line1, line2;
 	private Integer id;
