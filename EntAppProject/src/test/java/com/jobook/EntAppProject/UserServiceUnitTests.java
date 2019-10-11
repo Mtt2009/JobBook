@@ -18,7 +18,7 @@ import com.jobook.EntAppProject.model.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ServiceUnitTests {
+public class UserServiceUnitTests {
 	@Autowired
 	IUserService userService;
 	
