@@ -7,7 +7,7 @@ import com.jobook.EntAppProject.model.User;
 
 public interface IJobService {
 	
-	List<Job> getUsersRelatedJobs(User user);
+	List<Job> getUsersRelatedJobs(int userId);
 	
 	List<Job> searchJobByName(String searchTerm);
 }

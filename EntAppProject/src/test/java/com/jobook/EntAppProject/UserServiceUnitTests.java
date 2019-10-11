@@ -76,7 +76,7 @@ public class UserServiceUnitTests {
 	@Test 
 	public void badLookupUserById()
 	{
-		user = userService.getUserInfoById(1);
+		user = userService.getUserInfoById(5);
 		assertNull(user);
 	}
 }

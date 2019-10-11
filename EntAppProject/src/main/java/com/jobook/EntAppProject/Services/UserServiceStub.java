@@ -51,7 +51,14 @@ public class UserServiceStub implements IUserService {
 			user.setAddress(address);
 			user.setAddressId(address.getId());			
 		}
-
+		if (userId == 1)
+		{
+			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 1, null, "E");
+			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
+			user.setAddress(address);
+			user.setAddressId(address.getId());			
+		}
+		
 		user = convertUser(user);
 		return user;
 	}
