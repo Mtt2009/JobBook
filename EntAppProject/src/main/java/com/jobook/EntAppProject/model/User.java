@@ -2,11 +2,11 @@ package com.jobook.EntAppProject.model;
 
 public class User {
 	private Address address;
-	private String firstName, lastName, userName, password, email;
+	private String firstName, lastName, userName, password, email, userType;
 	private Integer id, addressId;
 	
 	public User(Address address, String firstName, String lastName, String userName, String password, String email,
-			Integer id, Integer addressId) {
+			Integer id, Integer addressId, String userType) {
 		super();
 		this.address = address;
 		this.firstName = firstName;
@@ -16,6 +16,7 @@ public class User {
 		this.email = email;
 		this.id = id;
 		this.addressId = addressId;
+		this.setUserType(userType);
 	}
 	
 	public Address getAddress() {
@@ -65,5 +66,13 @@ public class User {
 	}
 	public void setAddressId(Integer addressId) {
 		this.addressId = addressId;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 }

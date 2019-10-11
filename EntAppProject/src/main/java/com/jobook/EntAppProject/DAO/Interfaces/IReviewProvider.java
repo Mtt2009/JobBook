@@ -6,5 +6,5 @@ import com.jobook.EntAppProject.model.Review;
 import com.jobook.EntAppProject.model.User;
 
 public interface IReviewProvider {
-	public List<Review> GetUserRelatedReviews(User user);
+	public List<Review> getUserRelatedReviews(User user);
 }
