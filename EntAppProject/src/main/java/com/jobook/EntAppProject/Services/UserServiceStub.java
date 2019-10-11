@@ -1,15 +1,15 @@
-package com.jobook.EntAppProject.DAO.Stubs;
+package com.jobook.EntAppProject.Services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import com.jobook.EntAppProject.DAO.Interfaces.IUserProvider;
 import com.jobook.EntAppProject.model.Address;
 import com.jobook.EntAppProject.model.Customer;
 import com.jobook.EntAppProject.model.Employee;
 import com.jobook.EntAppProject.model.User;
 
-public class UserProviderStub implements IUserProvider {
-
+@Component
+public class UserServiceStub implements IUserService {
+	
 	public User login(String userName, String password) {
 		User user = null;
 		
@@ -23,7 +23,7 @@ public class UserProviderStub implements IUserProvider {
 		
 		if ((userName.trim().equalsIgnoreCase("testemployee") || userName.trim().equalsIgnoreCase("testemyployee@test.com")) && password.trim().equals("Password"))
 		{
-			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 0, null, "C");
+			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 0, null, "E");
 			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
 			user.setAddress(address);
 			user.setAddressId(address.getId());			
@@ -36,7 +36,7 @@ public class UserProviderStub implements IUserProvider {
 		return user;
 	}
 
-	public User getUserInfo(int userId) {
+	public User getUserInfoById(int userId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

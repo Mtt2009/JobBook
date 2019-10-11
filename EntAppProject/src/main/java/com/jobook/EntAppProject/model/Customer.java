@@ -2,6 +2,8 @@ package com.jobook.EntAppProject.model;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 public class Customer extends User {
 	private String preferredPaymentMethod;
 	private List<Job> orderHistory, currentOrders;

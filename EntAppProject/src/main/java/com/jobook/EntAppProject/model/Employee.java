@@ -2,6 +2,8 @@ package com.jobook.EntAppProject.model;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 public class Employee extends User {
 	private String preferredPaymentMethod;
 	private Double averageRating;

@@ -1,12 +1,14 @@
-package com.jobook.EntAppProject.DAO.Stubs;
+package com.jobook.EntAppProject.Services;
 
 import java.util.List;
 
-import com.jobook.EntAppProject.DAO.Interfaces.IJobProvider;
+import org.springframework.stereotype.Component;
+
 import com.jobook.EntAppProject.model.Job;
 import com.jobook.EntAppProject.model.User;
 
-public class JobProviderStub implements IJobProvider {
+@Component
+public class JobServiceStub implements IJobService {
 
 	public List<Job> getUsersRelatedJobs(User user) {
 		// TODO Auto-generated method stub
