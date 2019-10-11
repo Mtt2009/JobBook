@@ -18,7 +18,7 @@ import com.jobook.EntAppProject.model.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DAOUnitTests {
+public class ServiceUnitTests {
 	@Autowired
 	IUserService userService;
 	
@@ -47,7 +47,6 @@ public class DAOUnitTests {
 	public void employeeLogin()
 	{
 		employeeUserTriesToLogin();
-		boolean test = user instanceof Employee;
 		assertTrue(user instanceof Employee);
 		assertNotNull(user);
 	}
@@ -65,5 +64,19 @@ public class DAOUnitTests {
 
 	private void badUserTriesToLogin() {
 		user = userService.login("test", "PasswordWrong");
+	}
+	
+	@Test
+	public void lookupUserById()
+	{
+		user = userService.getUserInfoById(0);
+		assertNotNull(user);
+	}
+	
+	@Test 
+	public void badLookupUserById()
+	{
+		user = userService.getUserInfoById(1);
+		assertNull(user);
 	}
 }

@@ -23,12 +23,17 @@ public class UserServiceStub implements IUserService {
 		
 		if ((userName.trim().equalsIgnoreCase("testemployee") || userName.trim().equalsIgnoreCase("testemyployee@test.com")) && password.trim().equals("Password"))
 		{
-			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 0, null, "E");
+			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 1, null, "E");
 			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
 			user.setAddress(address);
 			user.setAddressId(address.getId());			
 		}
 		
+		user = convertUser(user);
+		return user;
+	}
+
+	private User convertUser(User user) {
 		if (user != null && user.getUserType().equals("C"))
 			user = new Customer(user.getAddress(), user.getFirstName(), user.getLastName(), user.getUserName(), user.getPassword(), user.getEmail(), user.getId(), user.getAddressId(), user.getUserType());
 		else if (user != null && user.getUserType().equals("E"))
@@ -37,8 +42,18 @@ public class UserServiceStub implements IUserService {
 	}
 
 	public User getUserInfoById(int userId) {
-		// TODO Auto-generated method stub
-		return null;
+		User user = null;
+		
+		if (userId == 0)
+		{
+			user = new User(null, "Stub", "Testing", "Test", "Password", "Test@Test.com", 0, null, "C");
+			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
+			user.setAddress(address);
+			user.setAddressId(address.getId());			
+		}
+
+		user = convertUser(user);
+		return user;
 	}
 
 }
