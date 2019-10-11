@@ -1,5 +1,7 @@
 package com.jobook.EntAppProject.DAO.Interfaces;
 
-public interface IUserProvider {
+import com.jobook.EntAppProject.model.User;
 
+public interface IUserProvider {
+	public User Login(String email, String password);
 }
