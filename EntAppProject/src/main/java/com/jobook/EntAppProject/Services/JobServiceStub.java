@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import com.jobook.EntAppProject.model.Customer;
 import com.jobook.EntAppProject.model.Employee;
 import com.jobook.EntAppProject.model.Job;
+import org.springframework.util.Assert;
 
 @Component
 public class JobServiceStub implements IJobService {
@@ -25,6 +26,7 @@ public class JobServiceStub implements IJobService {
 
 	private void generateTestJobs()
 	{
+		Assert.notNull(userService, "User service is null -- check DI container");
 		jobs = new ArrayList<>();
 		Customer customer = (Customer) userService.getUserInfoById(0);
 		Employee employee = (Employee) userService.getUserInfoById(1);
