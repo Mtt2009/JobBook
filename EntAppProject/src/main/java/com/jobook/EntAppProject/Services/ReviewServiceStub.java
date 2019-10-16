@@ -25,8 +25,7 @@ public class ReviewServiceStub implements IReviewService {
 		this.jobService = jobService;
 	}
 
-	private void generateTestReviews()
-	{
+	private void generateTestReviews() throws Exception {
 		Assert.notNull(userService, "User service is null -- check DI container");
 		Assert.notNull(jobService, "Job service is null -- check DI container");
 		reviews = new ArrayList<>();
@@ -37,7 +36,7 @@ public class ReviewServiceStub implements IReviewService {
 
 	}
 
-	public List<Review> getUserRelatedReviews(int userId) {
+	public List<Review> getUserRelatedReviews(int userId) throws Exception {
 		generateTestReviews();
 		List<Review> filteredReviews = new ArrayList<Review>();
 
@@ -50,7 +49,7 @@ public class ReviewServiceStub implements IReviewService {
 		return filteredReviews;
 	}
 
-	public Review getJobReview(int jobId) {
+	public Review getJobReview(int jobId) throws Exception {
 		generateTestReviews();
 		Review jobReview = null;
 
