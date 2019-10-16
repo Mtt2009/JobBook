@@ -24,8 +24,7 @@ public class JobServiceStub implements IJobService {
 	}
 
 
-	private void generateTestJobs()
-	{
+	private void generateTestJobs() throws Exception {
 		Assert.notNull(userService, "User service is null -- check DI container");
 		jobs = new ArrayList<>();
 		Customer customer = (Customer) userService.getUserInfoById(0);
@@ -36,7 +35,7 @@ public class JobServiceStub implements IJobService {
 
 	}
 
-	public List<Job> getUsersRelatedJobs(int userId) {
+	public List<Job> getUsersRelatedJobs(int userId) throws Exception {
 		generateTestJobs();
 		List<Job> filteredJobs = new ArrayList<>();
 
@@ -49,7 +48,7 @@ public class JobServiceStub implements IJobService {
 		return filteredJobs;
 	}
 
-	public List<Job> searchJobByName(String searchTerm) {
+	public List<Job> searchJobByName(String searchTerm) throws Exception {
 		generateTestJobs();
 		List<Job> filteredJobs = new ArrayList<>();
 

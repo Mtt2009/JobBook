@@ -1,6 +1,9 @@
 package com.jobook.EntAppProject.model;
 
+import javax.validation.constraints.NotNull;
+
 public class Address {
+	@NotNull
 	private String city, state, zip, line1, line2;
 	private Integer id;
 
