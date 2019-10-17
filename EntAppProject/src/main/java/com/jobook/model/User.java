@@ -3,7 +3,7 @@ package com.jobook.model;
 public class User {
 	private Address address;
 	private String firstName, lastName, userName, password, email, userType;
-	private Integer id, addressId;
+	private Integer typeOfId, addressId;
 	
 	public User(Address address, String firstName, String lastName, String userName, String password, String email,
 			Integer id, Integer addressId, String userType) {
@@ -14,7 +14,7 @@ public class User {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.id = id;
+		this.typeOfId = id;
 		this.addressId = addressId;
 		this.setUserType(userType);
 	}
@@ -56,10 +56,10 @@ public class User {
 		this.email = email;
 	}
 	public Integer getId() {
-		return id;
+		return typeOfId;
 	}
 	public void setId(Integer id) {
-		this.id = id;
+		this.typeOfId = id;
 	}
 	public Integer getAddressId() {
 		return addressId;

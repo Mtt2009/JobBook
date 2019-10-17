@@ -3,17 +3,17 @@ package com.jobook.model;
 import org.springframework.stereotype.Component;
 
 public class Address {
-	private String city, state, zip, line1, line2;
-	private Integer id;
+	private String city, state, zip, lineOneDescription, lineTwoDescription;
+	private Integer typeOfId;
 
 	public Address(String city, String state, String zip, String line1, String line2, Integer id) {
 		super();
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-		this.line1 = line1;
-		this.line2 = line2;
-		this.id = id;
+		this.lineOneDescription = line1;
+		this.lineTwoDescription = line2;
+		this.typeOfId = id;
 	}
 	public String getCity() {
 		return city;
@@ -34,21 +34,21 @@ public class Address {
 		this.zip = zip;
 	}
 	public String getLine1() {
-		return line1;
+		return lineOneDescription;
 	}
 	public void setLine1(String line1) {
-		this.line1 = line1;
+		this.lineOneDescription = line1;
 	}
 	public String getLine2() {
-		return line2;
+		return lineTwoDescription;
 	}
 	public void setLine2(String line2) {
-		this.line2 = line2;
+		this.lineTwoDescription = line2;
 	}
 	public Integer getId() {
-		return id;
+		return typeOfId;
 	}
 	public void setId(Integer id) {
-		this.id = id;
+		this.typeOfId = id;
 	}
 }

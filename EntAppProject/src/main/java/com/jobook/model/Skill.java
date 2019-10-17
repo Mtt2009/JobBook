@@ -1,20 +1,20 @@
 package com.jobook.model;
 
 public class Skill {
-	Integer id;
+	Integer typeOfId;
 	String skill;
 	
 	public Skill(Integer id, String skill) {
 		super();
-		this.id = id;
+		this.typeOfId = id;
 		this.skill = skill;
 	}
 	
 	public Integer getId() {
-		return id;
+		return typeOfId;
 	}
 	public void setId(Integer id) {
-		this.id = id;
+		this.typeOfId = id;
 	}
 	public String getSkill() {
 		return skill;
