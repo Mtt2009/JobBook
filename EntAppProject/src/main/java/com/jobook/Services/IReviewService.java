@@ -1,9 +1,9 @@
-package com.jobook.EntAppProject.Services;
+package com.jobook.Services;
 
 import java.util.List;
 
-import com.jobook.EntAppProject.model.Review;
-import com.jobook.EntAppProject.model.User;
+import com.jobook.model.Review;
+import com.jobook.model.User;
 
 public interface IReviewService {
 	/**

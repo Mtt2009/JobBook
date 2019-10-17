@@ -1,4 +1,4 @@
-package com.jobook.EntAppProject.model;
+package com.jobook.model;
 
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
-package com.jobook.EntAppProject.Services;
+package com.jobook.Services;
 
 
-import com.jobook.EntAppProject.model.User;
+import com.jobook.model.User;
 
 
 public interface IUserService {

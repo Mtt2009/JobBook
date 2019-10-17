@@ -14,14 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.jobook.EntAppProject.Services.IJobService;
-import com.jobook.EntAppProject.Services.IReviewService;
-import com.jobook.EntAppProject.Services.IUserService;
-import com.jobook.EntAppProject.model.Customer;
-import com.jobook.EntAppProject.model.Employee;
-import com.jobook.EntAppProject.model.Job;
-import com.jobook.EntAppProject.model.Review;
-import com.jobook.EntAppProject.model.User;
+import com.jobook.Services.IJobService;
+import com.jobook.Services.IReviewService;
+import com.jobook.Services.IUserService;
+import com.jobook.model.Customer;
+import com.jobook.model.Employee;
+import com.jobook.model.Job;
+import com.jobook.model.Review;
+import com.jobook.model.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

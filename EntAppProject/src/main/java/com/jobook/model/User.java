@@ -1,4 +1,4 @@
-package com.jobook.EntAppProject.model;
+package com.jobook.model;
 
 public class User {
 	private Address address;

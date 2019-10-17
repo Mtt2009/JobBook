@@ -1,4 +1,4 @@
-package com.jobook.EntAppProject.Services;
+package com.jobook.Services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.jobook.EntAppProject.model.Customer;
-import com.jobook.EntAppProject.model.Employee;
-import com.jobook.EntAppProject.model.Job;
+import com.jobook.model.Customer;
+import com.jobook.model.Employee;
+import com.jobook.model.Job;
 
 @Component
 public class JobServiceStub implements IJobService {
