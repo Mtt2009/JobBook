@@ -1,12 +1,12 @@
-package com.jobook.EntAppProject.Services;
+package com.jobook.Services;
 
 
-import com.jobook.EntAppProject.model.User;
+import com.jobook.model.User;
 
 
 public interface IUserService {
 	/**
-	 * pulls user info based on provided login infomation
+	 * pulls user info based on provided login information
 	 * @param userName
 	 * @param password
 	 * @return

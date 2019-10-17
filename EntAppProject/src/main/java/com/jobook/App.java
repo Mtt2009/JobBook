@@ -1,4 +1,4 @@
-package com.jobook.EntAppProject;
+package com.jobook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,11 +1,11 @@
-package com.jobook.EntAppProject.Services;
+package com.jobook.Services;
 
 import org.springframework.stereotype.Component;
 
-import com.jobook.EntAppProject.model.Address;
-import com.jobook.EntAppProject.model.Customer;
-import com.jobook.EntAppProject.model.Employee;
-import com.jobook.EntAppProject.model.User;
+import com.jobook.model.Address;
+import com.jobook.model.Customer;
+import com.jobook.model.Employee;
+import com.jobook.model.User;
 
 @Component
 public class UserServiceStub implements IUserService {

@@ -1,4 +1,4 @@
-package com.jobook.EntAppProject.model;
+package com.jobook.model;
 
 public class Review {
 	private Integer employeeId, customerId, jobId;
