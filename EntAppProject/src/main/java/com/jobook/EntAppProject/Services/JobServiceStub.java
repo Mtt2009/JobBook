@@ -35,7 +35,7 @@ public class JobServiceStub implements IJobService {
 		
 		for (Job job : jobs)
 		{
-			if ((job.getCustomerId() == userId) || (job.getEmployeeId() == userId)) {
+			if ((job.getCustomerId() != null && job.getCustomerId() == userId) || (job.getEmployeeId() != null && job.getEmployeeId() == userId)) {
 				filteredJobs.add(job);
 			}
 		}
