@@ -14,7 +14,6 @@ public class Job {
 	
 	public Job(Integer jobId, Integer customerId, Integer employeeId, Customer customer, Employee employee, String longDesc, String shortDesc, Date startDate,
 			Date endDate, Double price) {
-		super();
 		this.jobId = jobId;
 		this.customerId = customerId;
 		this.employeeId = employeeId;
@@ -29,7 +28,6 @@ public class Job {
 	
 	public Job(Integer jobId, Integer customerId, Integer employeeId, Customer customer, Employee employee, String longDesc, String shortDesc, Date startDate,
 			Date endDate, Boolean hasBeenReviewed, Boolean completed, Double price, Review review) {
-		super();
 		this.jobId = jobId;
 		this.customerId = customerId;
 		this.employeeId = employeeId;

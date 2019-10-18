@@ -36,8 +36,9 @@ public class ReviewServiceStub implements IReviewService {
 		
 		for (Review review : reviews)
 		{
-			if ((review.getCustomerId() != null && review.getCustomerId() == userId) || (review.getEmployeeId() != null && review.getEmployeeId() == userId))
+			if ((review.getCustomerId() == userId) || (review.getEmployeeId() == userId)) {
 				filteredReviews.add(review);
+			}
 		}
 		
 		return filteredReviews;
@@ -49,8 +50,9 @@ public class ReviewServiceStub implements IReviewService {
 		
 		for (Review review : reviews)
 		{
-			if (review.getJobId() != null && review.getJobId() == jobId)
+			if (review.getJobId() == jobId) {
 				jobReview = review;
+			}
 		}
 		
 		return jobReview;

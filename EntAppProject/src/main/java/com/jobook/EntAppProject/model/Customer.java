@@ -26,8 +26,9 @@ public class Customer extends User {
 	public void moveJobToHistory(Job job) throws Exception {
 		int index = currentOrders.indexOf(job);
 		
-		if(index == -1)
+		if(index == -1) {
 			throw new Exception("Job does not exist in current orders list.");
+		}
 		
 		orderHistory.add(job);
 		currentOrders.remove(index);

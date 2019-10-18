@@ -7,7 +7,6 @@ public class Address {
 	private Integer id;
 
 	public Address(String city, String state, String zip, String line1, String line2, Integer id) {
-		super();
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
