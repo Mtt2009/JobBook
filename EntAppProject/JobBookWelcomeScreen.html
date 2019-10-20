@@ -2,23 +2,35 @@
 <html>
 <head>
 <title>Welcome to JobBook</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="JobBookCSS.css">
 </head>
 <body>
- 
+
 <h1><span>Job</span>Book</h1>
- 
+ <div class="m-5 pb-5 bg-info">
 <h2>Welcome to JobBook</h2>
 <p></p>
  
 <form action="action_page.php" method="post">
 <div class="container">
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Username:" name="username" required>
+        <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="username" required>
+</div>
+
         <br>
         <br>
-        <label for="userpassword"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="userpassword" required>
+        <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+  </div>
+  <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="userpassword" required>
+</div>
+        
         <br>
         <form method="get" action="file:///C:/Users/salzm/OneDrive/Documents/School/Enterprise%20AppDev/JobBookUI/JBHomeScreen.html">
         <button type="submit">Login</button>
@@ -29,11 +41,10 @@
         </label>
         </div>
         <br>
-        <br>
-        </form>
+        
+        </form></div>
+        <br><br>
         <a href="file:///JBForgotPassword.html">Forgot Username/Password? Click Here.</a>
-<br>
-<br>
 <br>
 <br>
         <a href="file:///C:/Users/salzm/OneDrive/Documents/School/Enterprise%20AppDev/JobBookUI/JBCreateAccount.html">New to JobBook? Create an Account Here.</a>
