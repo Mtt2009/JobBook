@@ -2,52 +2,32 @@
 
 <html>
 
-<head>
+        <head>
+                <title>JobBook - Create an Account</title>
+                <link rel="stylesheet" href="JobBookCSS.css">
+        </head>
 
-<title>JobBook - Create an Account</title>
+        <body>
+                <h1><span>Job</span>Book</h1>
+                <h2>Create an Account</h2>
+                <br>
 
-<link rel="stylesheet" href="JobBookCSS.css">
- 
-</head>
-
-<body>
- 
-<h1><span>Job</span>Book</h1>
-
-<h2>Create an Account</h2>
-
-<br>
-
-<fieldset>
-
-<form action="file:///C:/Users/Administrator/eclipse-workspace/jobBookFINAL/src/main/resources/templates/JBHomescreen.html" method="post">
-
-<div class="container">
-        <label for="useremail"><b>Email:</b></label>
-        <input type="email" placeholder="Email:" name="useremail" required>
-        <br>
-        <label for="username"><b>Username:</b></label>
-        <input type="text" placeholder="Username:" name="username" required>
-        <br>
-        <br>
-        <label for="userpassword"><b>Password:</b></label>
-        <input type="password" placeholder="Password" name="userpassword" required>
-        <br>
-        <label for="userpasswordconfirm"><b>Confirm Password:</b></label>
-        <input type="password" placeholder="Password" name="userpasswordconfirm" required>
-        <br>
-        <button type="submit">Create</button>
-        <label>
-        <br>
-        <input type="checkbox" checked="checked" name="remember"> Remember me?
-        </label>
-        </div>
-        <br>
-        <br>
-        </form>
- 
-</fieldset>
- 
-</body>
+                <form action="file:///C:/Users/Administrator/eclipse-workspace/jobBookFINAL/src/main/resources/templates/JBHomescreen.html" method="post">
+                        <fieldset>
+                                <div class="container">
+                                        <label for="useremail"><b>Email:</b></label>
+                                        <input type="email" placeholder="Email:" name="useremail" id="useremail" required><br>
+                                        <label for="username"><b>Username:</b></label>
+                                        <input type="text" placeholder="Username:" name="username" id="username" required><br><br>
+                                        <label for="userpassword"><b>Password:</b></label>
+                                        <input type="password" placeholder="Password" name="userpassword" id="userpassword" required><br>
+                                        <label for="userpasswordconfirm"><b>Confirm Password:</b></label>
+                                        <input type="password" placeholder="Password" name="userpasswordconfirm" id="userpasswordconfirm" required><br>
+                                        <button type="submit">Create</button>
+                                        <label><br><input type="checkbox" checked="checked" name="remember"> Remember me?</label>
+                                </div><br><br>
+                        </fieldset>
+                </form>
+        </body>
 
 </html>

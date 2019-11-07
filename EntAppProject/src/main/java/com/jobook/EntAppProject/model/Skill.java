@@ -5,7 +5,6 @@ public class Skill {
 	String skill;
 	
 	public Skill(Integer id, String skill) {
-		super();
 		this.id = id;
 		this.skill = skill;
 	}

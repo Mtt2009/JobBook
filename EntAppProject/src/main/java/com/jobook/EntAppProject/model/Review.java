@@ -6,7 +6,6 @@ public class Review {
 	private Double rating;
 	
 	public Review(Integer employeeId, Integer customerId, Integer jobId, String description, String title, Double rating) {
-		super();
 		this.employeeId = employeeId;
 		this.customerId = customerId;
 		this.jobId = jobId;

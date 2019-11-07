@@ -7,7 +7,6 @@ public class User {
 	
 	public User(Address address, String firstName, String lastName, String userName, String password, String email,
 			Integer id, Integer addressId, String userType) {
-		super();
 		this.address = address;
 		this.firstName = firstName;
 		this.lastName = lastName;
