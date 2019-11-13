@@ -32,55 +32,29 @@ public class ReviewServiceUnitTests {
 	IUserService userService;
 	@Autowired
 	IReviewService reviewService;
-	
-	User user;
-	List<Review> reviews;
-	Review review;
-	
-	@Before
-	public void BeforeEachTest()
-	{
-		user = null;
-		reviews = new ArrayList<Review>();
-		review = null;
-	}
-	
+
 	@Test
 	public void getReviewsRelatedToCustomer()
 	{
-		user = userService.getUserInfoById(0);
-		userClicksOnAllReviews();
+		User user = userService.getUserInfoById(0);
+		List<Review> reviews = reviewService.getUserRelatedReviews(user.getId());
 		assertTrue(reviews.size() >= 1);
 	}
 
-	private void userClicksOnAllReviews() {
-		reviews = reviewService.getUserRelatedReviews(user.getId());
-	}
-	
 	@Test
 	public void getReviewsRelatedToEmployee()
 	{
-		user = userService.getUserInfoById(1);
-		userClicksOnAllReviews();
+		User user = userService.getUserInfoById(1);
+		List<Review> reviews = reviewService.getUserRelatedReviews(user.getId());
 		assertTrue(reviews.size() >= 1);
 	}
-	
+
 	@Test
 	public void getReviewOfJob()
 	{
-		user = userService.getUserInfoById(0);
-		Job job = userClicksOnAJob();
-		userClicksOnReview(job);
+		User user = userService.getUserInfoById(0);
+		Job job = jobService.getUsersRelatedJobs(user.getId()).get(1);
+		Review review = reviewService.getJobReview(job.getJobId();
 		assertNotNull(review);
 	}
-
-	private void userClicksOnReview(Job job) {
-		review = reviewService.getJobReview(job.getJobId());
-	}
-
-	private Job userClicksOnAJob() {
-		Job job = jobService.getUsersRelatedJobs(user.getId()).get(1);
-		return job;
-	}
-	
 }
