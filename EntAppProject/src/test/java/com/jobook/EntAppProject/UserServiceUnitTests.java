@@ -21,62 +21,41 @@ import com.jobook.EntAppProject.model.User;
 public class UserServiceUnitTests {
 	@Autowired
 	IUserService userService;
-	
-	User user;
-	
-	@Before
-	public void BeforeEachTest()
-	{
-		user = null;
-	}
-	
+
 	@Test
 	public void customerLogin()
 	{
-		customerUserTriesToLogin();
-		
+		User user = userService.login("test", "Password");
 		assertTrue(user instanceof Customer);
 		assertNotNull(user);
-	}
-	
-	private void customerUserTriesToLogin() {
-		user = userService.login("test", "Password");
 	}
 
 	@Test
 	public void employeeLogin()
 	{
-		employeeUserTriesToLogin();
+		User user = userService.login("testEmployee", "Password");
 		assertTrue(user instanceof Employee);
 		assertNotNull(user);
-	}
-	
-	private void employeeUserTriesToLogin() {
-		user = userService.login("testEmployee", "Password");
 	}
 
 	@Test
 	public void badLogin()
 	{
-		badUserTriesToLogin();
+		User user = userService.login("test", "PasswordWrong");
 		assertNull(user);
 	}
 
-	private void badUserTriesToLogin() {
-		user = userService.login("test", "PasswordWrong");
-	}
-	
 	@Test
 	public void lookupUserById()
 	{
-		user = userService.getUserInfoById(0);
+		User user = userService.getUserInfoById(0);
 		assertNotNull(user);
 	}
-	
-	@Test 
+
+	@Test
 	public void badLookupUserById()
 	{
-		user = userService.getUserInfoById(5);
+		User user = userService.getUserInfoById(5);
 		assertNull(user);
 	}
 }
