@@ -5,26 +5,26 @@
 <link rel="stylesheet" href="JobBookCSS.css">
 </head>
 <body>
- 
+
 <h1><span>Job</span>Book</h1>
- 
+
 <h2>Welcome to JobBook</h2>
 <p></p>
- 
+
 <form action="action_page.php" method="post">
 <div class="container">
         <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Username:" name="username" required>
+        <input id="username" type="text" placeholder="Username:" name="username" required>
         <br>
         <br>
-        <label for="userpassword"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="userpassword" required>
+        <label for="password"><b>Password</b></label>
+        <input id="password" type="password" placeholder="Password" name="userpassword" required>
         <br>
         <form method="get" action="/JBHomeScreen">
         <button type="submit">Login</button>
         </form>
         <label>
-        
+
         <input type="checkbox" checked="checked" name="remember"> Remember me?
         </label>
         </div>
@@ -37,9 +37,9 @@
 <br>
 <br>
         <a href="/JBCreateAccount">New to JobBook? Create an Account Here.</a>
- 
+
 </body>
- 
- 
- 
+
+
+
 </html>
