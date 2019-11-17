@@ -12,8 +12,9 @@ public class UserServiceStub implements IUserService {
 	
 	public User login(String userName, String password) {
 		User user = null;
-		
-		if ((userName.trim().equalsIgnoreCase("test") || userName.trim().equalsIgnoreCase("test@test.com")) && password.trim().equals("Password"))
+		String trimmedUserName = userName.trim();
+		String trimmedPassword = password.trim();
+		if ((trimmedUserName.equalsIgnoreCase("test") || trimmedUserName.equalsIgnoreCase("test@test.com")) && trimmedPassword.equals("Password"))
 		{
 			user = new User(null, "Stub", "Testing", "Test", "Password", "Test@Test.com", 0, null, "C");
 			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
@@ -21,7 +22,7 @@ public class UserServiceStub implements IUserService {
 			user.setAddressId(address.getId());			
 		}
 		
-		if ((userName.trim().equalsIgnoreCase("testemployee") || userName.trim().equalsIgnoreCase("testemyployee@test.com")) && password.trim().equals("Password"))
+		if ((trimmedUserName.equalsIgnoreCase("testemployee") || trimmedUserName.equalsIgnoreCase("testemyployee@test.com")) && trimmedPassword.equals("Password"))
 		{
 			user = new User(null, "Stub", "Testing", "TestEmployee", "Password", "TestEmployee@Test.com", 1, null, "E");
 			Address address = new Address("Cincinnati", "Ohio", "45206", "123 Test Rd.", "", 0);
