@@ -2,36 +2,24 @@
 
 <html>
 
-<head>
+    <head>
+        <title>Profile </title>
+        <link rel="stylesheet" href="../static/css/JobBookCSS.css">
+    </head>
 
-<title>Profile </title>
+    <body>
+        <h1><span class="page-title">Job</span>Book</h1>
+        <h2>Welcome, (User Profile)</h2>
+        <h2><a href="/JBHomescreen.html">
+        Home
+        </a></h2>
 
-<link rel="stylesheet" href="JobBookCSS.css">
+        <form id="bio" onsubmit="return false;">
+            Bio:<br>
+            <input id="userInput"><br>
+            Skills:<br>
+            <input type="text" id="userSkills">
+        </form>
+    </body>
 
-</head>
-
-<body>
- 
-<h1><span>Job</span>Book</h1>
-
-<h2>Welcome, (User Profile)</h2>
-
-<h2><a href="/JBWelcomeScreen">
-Home
-</a></h2>
- 
-<form id="bio" onsubmit="return false;">
-Bio:
-<br>
-<input style=position:left; id="userInput">
-
-<br>
-Skills:
-<br>
-<input style=position:left; type="text" id="userSkills">
- 
-</form>
- 
-</body>
-
-</html>
+</html> 
