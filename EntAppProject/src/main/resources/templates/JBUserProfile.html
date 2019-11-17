@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -14,7 +14,7 @@
  
 <h1><span>Job</span>Book</h1>
 
-<h2>Welcome, (User Profile)</h2>
+<h2>Welcome, <span th:text="${userDTO}"></span> </h2>
 
 <h2><a href="/JBWelcomeScreen">
 Home
@@ -23,12 +23,13 @@ Home
 <form id="bio" onsubmit="return false;">
 Bio:
 <br>
-<input style=position:left; id="userInput">
+<textarea style="width: 250px; height:100px;" id="userInput"placeholder="User description here"></textarea>
+
 
 <br>
 Skills:
 <br>
-<input style=position:left; type="text" id="userSkills">
+<textarea style="width: 250px; height:100px;" id="userSkills"placeholder="Skill description here"></textarea>
  
 </form>
  
