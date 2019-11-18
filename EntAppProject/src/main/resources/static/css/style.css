@@ -1,14 +1,16 @@
+
 h1	{
-	color: green;
+	color: #000080;
 	text-align: center;	
 }
 
 h2	{
+	color: #804000;
 	text-align: center;	
 }
 
 span	{
-	color: orange
+	color: #008040;
 }
 
 form	{
@@ -17,4 +19,8 @@ form	{
 
 fieldset	{
 	margin: 0px auto;
+}
+
+body	{
+	background-color: #c0c0c0;
 }
